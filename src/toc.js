@@ -44,9 +44,11 @@ function headingFix(heading) {
     let head = html.substring(0, html.lastIndexOf('>') + 1);
     let text = html.substring(html.lastIndexOf('>') + 1, html.length);
     //heading.innerHTML = head + '<a href="#' + id + '"><span>' + text + '</span></a>';
-    heading.innerHTML = head + '<a href="javascript:document.getElementById(\'' + id + '\').scrollIntoView()"><span>' + text + '</span></a>';
-    
+    html = head + '<a href="javascript:document.getElementById(\'' + id + '\').scrollIntoView()"><span>' + text + '</span></a>';    
   }
+  html.replaceAll('<strong>', '<span>');
+  html.replaceAll('</strong>', '</span>');
+  heading.innerHTML = html;
 }
 
 function hashstr(str) {
