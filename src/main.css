@@ -95,17 +95,17 @@ aside.toc-nav.nothing {
 }
 
 .page_toc div.lv3 {
-  text-indent: 30px;
-}
-
-.page_toc div.lv4 {
   text-indent: 40px;
 }
 
-.page_toc div.lv5 {
+.page_toc div.lv4 {
   text-indent: 50px;
 }
 
-.page_toc div.lv6 {
+.page_toc div.lv5 {
   text-indent: 60px;
+}
+
+.page_toc div.lv6 {
+  text-indent: 70px;
 }
