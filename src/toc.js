@@ -45,9 +45,9 @@ function headingFix(heading) {
     let text = html.substring(html.lastIndexOf('>') + 1, html.length);
     //heading.innerHTML = head + '<a href="#' + id + '"><span>' + text + '</span></a>';
     html = head + '<a href="javascript:document.getElementById(\'' + id + '\').scrollIntoView()"><span>' + text + '</span></a>';    
+  } else {
+    html = html.replaceAll('<strong>', '<a href="javascript:document.getElementById(\'' + id + '\').scrollIntoView()"><span>').replaceAll('</strong>', '</span></a>');
   }
-  html.replaceAll('<strong>', '<span>');
-  html.replaceAll('</strong>', '</span>');
   heading.innerHTML = html;
 }
 
